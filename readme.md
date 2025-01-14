@@ -55,7 +55,7 @@ Nje aplikacion dashboard per menaxhimin e palestrave, stervitjeve dhe klienteve.
 
 ### Struktura e Projektit
 
-Sistemi i menaxhimit te klienteve dhe trajnereve te Fitness-it/
+````Sistemi i menaxhimit te klienteve dhe trajnereve te Fitness-it/
 ├── about.md
 ├── database.sql
 ├── diagrami_ER_1.jpg
@@ -84,7 +84,7 @@ Sistemi i menaxhimit te klienteve dhe trajnereve te Fitness-it/
 │ ├── index.php # ne qofte se jeni loguar , redirects ne home page, nqs jo , redirects to login.php
 │ ├── layout.php # permban layout, komponentet qe nuk ndryshojne ne faqe
 │ ├── login.php
-│ ├── logout.php
+│ ├── logout.php```
 
 ## Query te perdorura
 
@@ -99,7 +99,7 @@ FROM clients c
 LEFT JOIN trainers t ON c.trainer_id = t.id
 LEFT JOIN payments p ON c.id = p.client_id
 ORDER BY $orderBy
-```
+````
 
 ### Query per te marre 5 sessionet me te fundit
 
