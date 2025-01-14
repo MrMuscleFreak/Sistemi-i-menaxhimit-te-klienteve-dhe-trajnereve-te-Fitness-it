@@ -1,6 +1,6 @@
 <p align="center">
         <a href="https://ibb.co/ck6G4LN">
-        <img src="https://i.ibb.co/HBtW5dr/diagrami-ER-1.jpg" alt="diagrami-ER-1">
+          <img src="https://i.ibb.co/HBtW5dr/diagrami-ER-1.jpg" alt="diagrami-ER-1">
         </a>
 </p>
 
