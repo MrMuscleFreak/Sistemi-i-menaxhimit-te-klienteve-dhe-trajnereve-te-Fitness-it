@@ -55,7 +55,8 @@ Nje aplikacion dashboard per menaxhimin e palestrave, stervitjeve dhe klienteve.
 
 ### Struktura e Projektit
 
-````Sistemi i menaxhimit te klienteve dhe trajnereve te Fitness-it/
+````
+Sistemi i menaxhimit te klienteve dhe trajnereve te Fitness-it/
 ├── about.md
 ├── database.sql
 ├── diagrami_ER_1.jpg
