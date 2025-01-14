@@ -1,7 +1,7 @@
 <p align="center">
-        <a href="https://ibb.co/ck6G4LN">
-          <img src="https://i.ibb.co/HBtW5dr/diagrami-ER-1.jpg" alt="diagrami-ER-1">
-        </a>
+    <a href="https://ibb.co/ck6G4LN">
+        <img src="https://i.ibb.co/HBtW5dr/diagrami-ER-1.jpg" alt="diagrami-ER-1" width="800" />
+    </a>
 </p>
 
 # Fitness App Dashboard
