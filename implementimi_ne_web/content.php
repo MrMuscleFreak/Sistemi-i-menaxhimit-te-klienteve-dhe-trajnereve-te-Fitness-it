@@ -9,19 +9,22 @@ if ($query) {
 } else {
     switch ($page) {
         case 'home':
-            include('dashboard/home.php');
+            include('pages/home.php');
             break;
         case 'programs':
-            include('dashboard/training-programs.php');
+            include('pages/training-programs.php');
             break;
         case 'excercises':
-            include('dashboard/excercise-library.php');
+            include('pages/excercise-library.php');
             break;
         case 'clients':
-            include('dashboard/clients.php');
+            include('pages/clients.php');
             break;
         case 'payments':
-            include('dashboard/payment-records.php');
+            include('pages/payment-records.php');
+            break;
+        case 'new-client':
+            include('pages/new-client.php');
             break;
         default:
             echo "<h2>Error!</h2>";

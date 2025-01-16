@@ -21,6 +21,7 @@ Nje aplikacion dashboard per menaxhimin e palestrave, stervitjeve dhe klienteve.
 ### 2. Menaxhimi i Klienteve
 
 - Shfaqja e listes se klienteve
+- Shtimi i klienteve te ri nga website
 - Statusi i pagesave per secilin klient
 - Lidhja me trajneret perkates
 - Renditja sipas emrit ose statusit te pageses
@@ -66,6 +67,7 @@ Sistemi i menaxhimit te klienteve dhe trajnereve te Fitness-it/
 │ │ ├── clients.php
 │ │ ├── exercise-library.php
 │ │ ├── home.php
+│ │ ├── new-client.php
 │ │ ├── payment-records.php
 │ │ ├── training-programs.php
 │ ├── logic/ # permban logic per te kryer lidhjen me databazen
@@ -75,6 +77,7 @@ Sistemi i menaxhimit te klienteve dhe trajnereve te Fitness-it/
 │ │ ├── clients-query.php
 │ │ ├── exercises-query.php
 │ │ ├── general-info-queries.php
+│ │ ├── new-client.php
 │ │ ├── payments-query.php
 │ │ ├── sessions-query.php
 │ │ ├── trainers-query.php
@@ -165,6 +168,22 @@ SELECT ROUND(AVG(price_per_session), 0) AS average FROM trainers
 SELECT COUNT(*) AS excercises FROM exercises
 SELECT COUNT(*) AS trainers FROM trainers
 SELECT COUNT(*) AS clients FROM clients
+```
+
+### Query per te shtuar klienta te ri ne database
+
+```php
+// Prepare and bind
+$stmt = $conn->prepare("INSERT INTO clients (first_name, last_name, date_of_birth, address, contact_info, trainer_id) VALUES (?, ?, ?, ?, ?, ?)");
+$stmt->bind_param("sssssi", $first_name, $last_name, $date_of_birth, $address, $contact_info, $trainer_id);
+
+// Set parameters and execute
+$first_name = $_POST['first_name'];
+$last_name = $_POST['last_name'];
+$date_of_birth = $_POST['date_of_birth'];
+$address = $_POST['address'];
+$contact_info = $_POST['contact_info'];
+$trainer_id = $_POST['trainer_id'];
 ```
 
 ### Instalimi
