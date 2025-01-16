@@ -4,7 +4,9 @@
     </a>
 </p>
 
-# Fitness App Dashboard
+# Projekt
+
+## Tema: Sistemi i menaxhimit te klienteve dhe trajnereve te Fitness-it
 
 ## Pershkrimi
 
@@ -58,7 +60,7 @@ Nje aplikacion dashboard per menaxhimin e palestrave, stervitjeve dhe klienteve.
 
 ```
 Sistemi i menaxhimit te klienteve dhe trajnereve te Fitness-it/
-├── about.md
+├── readme.md
 ├── database.sql
 ├── diagrami_ER_1.jpg
 ├── diagrami_ER_2.jpg
