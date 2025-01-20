@@ -16,68 +16,68 @@ Kjo databaze eshte projektuar per te menaxhuar klientet, trajneret, programet e 
 
 ### Tabela clients (Klientet)
 
-    •	Kjo tabele ruan informacionin e klienteve, perfshire emrin, mbiemrin, datelindjen, adresen dhe kontaktin.
-    •	Ka nje lidhje trainer_id, qe tregon trajnerin e klientit (nese ka nje te tille).
-    •	Lidhja clients.trainer_id → trainers.id eshte nje lidhje shume-me-nje, qe do te thote se nje trajner mund te trajnoje shume kliente, por nje klient ka vetem nje trajner.
+- Kjo tabele ruan informacionin e klienteve, perfshire emrin, mbiemrin, datelindjen, adresen dhe kontaktin.
+- Ka nje lidhje trainer_id, qe tregon trajnerin e klientit (nese ka nje te tille).
+- Lidhja clients.trainer_id → trainers.id eshte nje lidhje shume-me-nje, qe do te thote se nje trajner mund te trajnoje shume kliente, por nje klient ka vetem nje trajner.
 
 ### Tabela trainers (Trajneret)
 
-    •	Kjo tabele permban trajneret, me informacione si emri, mbiemri, specializimi, pervoja dhe cmimi per seance.
-    •	Eshte e lidhur me tabelat clients dhe training_programs per te menaxhuar klientet qe trajnojne dhe programet e trajnimit qe cdo trajner ka.
-    •	Lidhja training_programs.trainer_id → trainers.id eshte nje shume-me-nje, qe do te thote se nje trajner mund te krijoje shume programe trajnimi.
+- Kjo tabele permban trajneret, me informacione si emri, mbiemri, specializimi, pervoja dhe cmimi per seance.
+- Eshte e lidhur me tabelat clients dhe training_programs per te menaxhuar klientet qe trajnojne dhe programet e trajnimit qe cdo trajner ka.
+- Lidhja training_programs.trainer_id → trainers.id eshte nje shume-me-nje, qe do te thote se nje trajner mund te krijoje shume programe trajnimi.
 
 ### Tabela training_programs (Programet e Trajnimit)
 
-    •	Cdo program trajnimi ka nje emer, pershkrim, kohezgjatje dhe eshte i lidhur me nje trajner.
-    •	Kjo strukture ben te mundur qe trajneret te krijojne programe te ndryshme per klientet e tyre.
-    •	eshte e lidhur me program_exercises, qe menaxhon ushtrimet specifike per çdo program.
+- Cdo program trajnimi ka nje emer, pershkrim, kohezgjatje dhe eshte i lidhur me nje trajner.
+- Kjo strukture ben te mundur qe trajneret te krijojne programe te ndryshme per klientet e tyre.
+- eshte e lidhur me program_exercises, qe menaxhon ushtrimet specifike per çdo program.
 
 ### Tabela exercises (Ushtrimet)
 
-    •	Ruhet informacioni per ushtrimet specifike, duke perfshire emrin, llojin dhe nje video udhezuese.
-    •	Kjo tabele nuk eshte e lidhur drejtperdrejt me klientet ose trajneret, por me program_exercises, per te menaxhuar ushtrimet brenda nje programi.
+- Ruhet informacioni per ushtrimet specifike, duke perfshire emrin, llojin dhe nje video udhezuese.
+- Kjo tabele nuk eshte e lidhur drejtperdrejt me klientet ose trajneret, por me program_exercises, per te menaxhuar ushtrimet brenda nje programi.
 
 ### Tabela program_exercises (Ushtrimet ne nje program)
 
-    •	Kjo tabele eshte nje tabele lidhese mes training_programs dhe exercises.
-    •	Çdo rresht ne kete tabele perfaqeson nje ushtrim brenda nje programi te caktuar dhe ka nje sequence_number per te ruajtur rendin e ushtrimeve.
-    •	Lidhjet:
-    program_exercises.program_id → training_programs.id
-    program_exercises.exercise_id → exercises.id
-    •	Kjo lidhje shume-me-shume (many-to-many) lejon qe nje ushtrim te jete pjese e disa programeve te ndryshme.
+- Kjo tabele eshte nje tabele lidhese mes training_programs dhe exercises.
+- Çdo rresht ne kete tabele perfaqeson nje ushtrim brenda nje programi te caktuar dhe ka nje sequence_number per te ruajtur rendin e ushtrimeve.
+- Lidhjet:
+  program_exercises.program_id → training_programs.id
+  program_exercises.exercise_id → exercises.id
+- Kjo lidhje shume-me-shume (many-to-many) lejon qe nje ushtrim te jete pjese e disa programeve te ndryshme.
 
 ### Tabela sessions (Seancat e Klienteve)
 
-    •	Perfaqeson seancat individuale te nje klienti per nje program te caktuar ne nje date te caktuar.
-    •	Lidhjet:
-    sessions.client_id → clients.id → nje klient mund te kete shume seanca.
-    sessions.program_id → training_programs.id → nje program mund te permbaje shume seanca.
-    •	Kjo strukture lejon te gjurmohet pjesemarrja e klienteve ne seanca te ndryshme te trajnimit.
+- Perfaqeson seancat individuale te nje klienti per nje program te caktuar ne nje date te caktuar.
+- Lidhjet:
+  sessions.client_id → clients.id → nje klient mund te kete shume seanca.
+  sessions.program_id → training_programs.id → nje program mund te permbaje shume seanca.
+- Kjo strukture lejon te gjurmohet pjesemarrja e klienteve ne seanca te ndryshme te trajnimit.
 
 ### Tabela payments (Pagesat)
 
-    •	Regjistron pagesat qe bejne klientet per trajnim.
-    •	Lidhjet:
-    payments.client_id → clients.id, qe do te thote se nje klient mund te kete bere shume pagesa me kalimin e kohes.
-    •	Kjo strukture ndihmon per te mbajtur nje historik te pagesave te secilit klient.
+- Regjistron pagesat qe bejne klientet per trajnim.
+- Lidhjet:
+  payments.client_id → clients.id, qe do te thote se nje klient mund te kete bere shume pagesa me kalimin e kohes.
+- Kjo strukture ndihmon per te mbajtur nje historik te pagesave te secilit klient.
 
 ## Pse eshte bere kjo strukture keshtu?
 
 ### Normalizimi i te dhenave:
 
-    •	Duke e ndare informacionin ne tabela te ndryshme dhe duke krijuar lidhje te sakta, shmanget perseritja e te dhenave (redundanca).
-    •	P.sh., ne vend qe te ruajme ushtrimet brenda tabeles training_programs, ato ruhen me vete ne exercises, dhe lidhja behet permes program_exercises.
+- Duke e ndare informacionin ne tabela te ndryshme dhe duke krijuar lidhje te sakta, shmanget perseritja e te dhenave (redundanca).
+- P.sh., ne vend qe te ruajme ushtrimet brenda tabeles training_programs, ato ruhen me vete ne exercises, dhe lidhja behet permes program_exercises.
 
 ### Fleksibiliteti dhe skalabiliteti:
 
-    •	Nje trajner mund te trajnoje shume kliente, dhe çdo klient mund te ndjeke programe te ndryshme.
-    •	Nje program mund te kete shume ushtrime, dhe nje ushtrim mund te jete pjese e shume programeve.
-    •	Klientet mund te bejne pagesa te shumta dhe te kene shume seanca.
+- Nje trajner mund te trajnoje shume kliente, dhe çdo klient mund te ndjeke programe te ndryshme.
+- Nje program mund te kete shume ushtrime, dhe nje ushtrim mund te jete pjese e shume programeve.
+- Klientet mund te bejne pagesa te shumta dhe te kene shume seanca.
 
 ### Integriteti i te dhenave:
 
-    •	Duke perdorur çelesa te huaj (Foreign Keys), sigurohet qe nuk mund te kete te dhena te pavlefshme. P.sh., nje session nuk mund te ekzistoje pa nje client_id dhe nje program_id.
-    •	Nese nje trajner largohet nga palestra, te dhenat e tij mund te trajtohen ne menyre te kujdesshme pa prishur sistemin.
+- Duke perdorur çelesa te huaj (Foreign Keys), sigurohet qe nuk mund te kete te dhena te pavlefshme. P.sh., nje session nuk mund te ekzistoje pa nje client_id dhe nje program_id.
+- Nese nje trajner largohet nga palestra, te dhenat e tij mund te trajtohen ne menyre te kujdesshme pa prishur sistemin.
 
 ### 1. Sistemi i Autentifikimit
 
