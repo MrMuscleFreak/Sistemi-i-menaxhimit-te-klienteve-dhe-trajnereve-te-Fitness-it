@@ -1,6 +1,6 @@
 <p align="center">
     <a href="https://ibb.co/ck6G4LN">
-        <img src="https://i.ibb.co/HBtW5dr/diagrami-ER-1.jpg" alt="diagrami-ER-1" width="1800" />
+        <img src="https://i.ibb.co/HBtW5dr/diagrami-ER-1.jpg" alt="diagrami-EER-1" width="1600" />
     </a>
 </p>
 
@@ -266,7 +266,7 @@ $trainer_id = $_POST['trainer_id'];
 ### Konfigurimi i Databazes
 
 ```php
-define('DB_HOST', 'localhost'); # ose ip e databazes suaj
+define('DB_HOST', 'localhost'); # ose ip e databazes
 define('DB_USER', 'root');
 define('DB_PASS', 'password');
 define('DB_NAME', 'fitness_app');
@@ -274,7 +274,7 @@ define('DB_NAME', 'fitness_app');
 
 ### Perdorimi
 
-1. Hyni ne sistem duke perdorur kredencialet e konfiguruara
+1. Logohu ne sistem duke perdorur kredencialet e konfiguruara
 2. Navigoni nepermjet menu-se ne krah
 3. Menaxhoni klientet, programet dhe pagesat
 4. Perdorni funksionin e kerkimit per te gjetur programe specifike
@@ -284,6 +284,6 @@ define('DB_NAME', 'fitness_app');
 
 1. [Klausar Vladi](mailto:klausar.vladi@fshnstudent.info) - Implementimi i projektit ne SQL edhe web per nje nderfaqe me te thjeshte edhe intuitive
 
-2. [Grasjela Nora](mailto:grasjela.nora@fshnstudent.info) & [Igli Daja](mailto:igli.daja@fshnstudent.info) - Hartimin e diagramit ER , lidhjet midis entiteteve edhe hartimin e atributeve perkatese
+2. [Grasjela Nora](mailto:grasjela.nora@fshnstudent.info) & [Igli Daja](mailto:igli.daja@fshnstudent.info) - Hartimin e diagramit EER , lidhjet midis entiteteve edhe hartimin e atributeve perkatese
 
 3. [Fadiona Keraj](mailto:fadiona.keraj@fshnstudent.info) & [Klejdi Cenaj](mailto:klejdi.cenaj@fshnstudent.info) - Hartimin e querive te ndryshme te perdorura ne rastet e ndryshme te nevojshme te implementimit te databases
