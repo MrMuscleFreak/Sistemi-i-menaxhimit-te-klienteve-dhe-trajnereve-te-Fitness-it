@@ -1,6 +1,6 @@
 <p align="center">
     <a href="https://ibb.co/ck6G4LN">
-        <img src="https://i.ibb.co/HBtW5dr/diagrami-ER-1.jpg" alt="diagrami-ER-1" width="800" />
+        <img src="https://i.ibb.co/HBtW5dr/diagrami-ER-1.jpg" alt="diagrami-ER-1" width="1800" />
     </a>
 </p>
 
@@ -65,18 +65,18 @@ Kjo databaze eshte projektuar per te menaxhuar klientet, trajneret, programet e 
 
 ### Normalizimi i te dhenave:
 
-- Duke e ndare informacionin ne tabela te ndryshme dhe duke krijuar lidhje te sakta, shmanget perseritja e te dhenave (redundanca).
+- Duke e ndare informacionin ne tabela te ndryshme dhe duke krijuar lidhje te sakta, shmanget perseritja e te dhenave.
 - P.sh., ne vend qe te ruajme ushtrimet brenda tabeles training_programs, ato ruhen me vete ne exercises, dhe lidhja behet permes program_exercises.
 
 ### Fleksibiliteti dhe skalabiliteti:
 
-- Nje trajner mund te trajnoje shume kliente, dhe çdo klient mund te ndjeke programe te ndryshme.
+- Nje trajner mund te trajnoje shume kliente, dhe cdo klient mund te ndjeke programe te ndryshme.
 - Nje program mund te kete shume ushtrime, dhe nje ushtrim mund te jete pjese e shume programeve.
 - Klientet mund te bejne pagesa te shumta dhe te kene shume seanca.
 
 ### Integriteti i te dhenave:
 
-- Duke perdorur çelesa te huaj (Foreign Keys), sigurohet qe nuk mund te kete te dhena te pavlefshme. P.sh., nje session nuk mund te ekzistoje pa nje client_id dhe nje program_id.
+- Duke perdorur celesa te huaj (Foreign Keys), sigurohet qe nuk mund te kete te dhena te pavlefshme. P.sh., nje session nuk mund te ekzistoje pa nje client_id dhe nje program_id.
 - Nese nje trajner largohet nga palestra, te dhenat e tij mund te trajtohen ne menyre te kujdesshme pa prishur sistemin.
 
 ### 1. Sistemi i Autentifikimit
