@@ -4,7 +4,7 @@
     </a>
 </p>
 
-# Projekt
+# PROJEKT
 
 ## Tema: Sistemi i menaxhimit te klienteve dhe trajnereve te Fitness-it
 
@@ -78,6 +78,8 @@ Kjo databaze eshte projektuar per te menaxhuar klientet, trajneret, programet e 
 
 - Duke perdorur celesa te huaj (Foreign Keys), sigurohet qe nuk mund te kete te dhena te pavlefshme. P.sh., nje session nuk mund te ekzistoje pa nje client_id dhe nje program_id.
 - Nese nje trajner largohet nga palestra, te dhenat e tij mund te trajtohen ne menyre te kujdesshme pa prishur sistemin.
+
+## Avantazhet e te implementuarit te databazes ne nje website/dashboard
 
 ### 1. Sistemi i Autentifikimit
 
@@ -213,7 +215,7 @@ SELECT tp.id AS program_id,
 FROM training_programs tp
 JOIN trainers t ON tp.trainer_id = t.id
 JOIN program_exercises pe ON pe.program_id = tp.id
-JOIN exercises e ON pe.exercise_id = e.idpse
+JOIN exercises e ON pe.exercise_id = e.id
 WHERE tp.name LIKE ?
 ORDER BY tp.id, pe.sequence_number
 ```
